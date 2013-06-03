@@ -1,0 +1,35 @@
+body {
+  padding: 10px;   
+}
+
+#map_canvas {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    border: 1px solid #ccc;
+}
+
+.adp-text {
+	margin:20px;
+	float: left;
+	
+}
+
+#dir-container li input {
+  font-size: 0.85em;
+  width: 210px;
+}
+
+
+#dir-container {
+  height: 100%;
+  overflow: auto;
+  padding: 2px 4px 2px 0;
+}
+#dir-container table {
+  font-size: 1em;
+  width: 100%;
+}
+
+
+

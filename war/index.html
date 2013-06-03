@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" ng-app="map-mcbjam">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Calcul de frais de déplacement</title>
+
+ <!-- CSS
+    ================================================== -->
+<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+<link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet" />
+
+
+ <!-- JS
+    ================================================== -->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.exp&sensor=true&libraries=places&amp;key=AIzaSyDom7MFIVywdB4ofGNmyDT9NnFLogVefFQ"></script>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+
+ <!-- Angular -->
+ <script src="lib/angular/angular.js"></script>
+ <script src="js/directives.js"></script>
+<script src="js/controller.js"></script>
+
+
+ <!-- Personal -->
+<script src="js/main.js"></script>
+
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+	<div class='span8'>
+		<h1>Calculez vos Frais de Déplacement</h1>
+	</div>
+	<div class='span4'>
+		<img class="img-polaroid"    width="150" src="http://www.syntec-numerique.fr/sites/default/files/styles/syntec_page_full/public/esn-baseline.jpg?itok=K-A-uMzN" />	
+		<img class="img-polaroid"    width="160" src="http://consortium-si.co/wp-content/uploads/2013/01/syntec-680x309.jpg" />
+	</div>
+</div>
+	<div ng-controller="MainController">
+      <form novalidate class="simple-form">
+        De: <input type="text" ng-model="dirRequest.origin" id='dirRequest.origin' /><br>
+        A: <input type="text" ng-model="dirRequest.destination" id='dirRequest.destination' />
+        <button ng-click="update()">Go</button>   
+      </form>
+   
+      
+      
+      
+	 <map></map>
+	 
+      
+
+  	</div><!-- End mainController -->
+	</div><!-- End Container -->
+
+</body>
+</html>

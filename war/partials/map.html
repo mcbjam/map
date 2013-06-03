@@ -1,0 +1,31 @@
+<div class="row">
+	<div class='span9'> 
+	  Chevaux fiscaux: <select ng-model="fraisDeDep.cv" class="input-mini">
+		  <option>2</option>
+		  <option>3</option>
+		  <option>4</option>
+		  <option>5</option>
+		  <option>6</option>
+		  <option>7</option>
+		</select> 
+		Aller Retour :<input type="checkbox" ng-model="fraisDeDep.allerretour" ng-true-value="2" ng-false-value="1"> <br/>
+		
+	<pre>
+       {{fraisDeDep.kilometre}} Km    *   {{fraisDeDep.indemniteKilometre}} &euro;   *   {{fraisDeDep.allerretour}} Aller =   {{fraisDeDep.kilometre * fraisDeDep.indemniteKilometre *fraisDeDep.allerretour}} &euro;
+      </pre>
+	
+		<div id="map_canvas"></div>
+		
+		<pre>direction = {{dirRequest | json}}<br>master-direction = {{master | json}}
+      <br>Frais de Dep = {{fraisDeDep | json}}
+      <br>Position Actuelle : {{currentPos}}
+      <br>map = {{map_options | json}}
+      </pre>
+		
+	</div>
+	<div class='span3'>
+	<div id="side-container">
+		<div id="dir-container"></div>
+		</div>
+	</div>
+</div>
